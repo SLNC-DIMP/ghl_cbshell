@@ -5,10 +5,14 @@ layout: default
 # item-meta adds rich meta markup to the page on production build
 item-meta: true
 ---
+{%- assign templates = site.data[site.metadata] | where_exp: 'item','item.parentid == nil ' | map: "display_template" -%}
+{%- assign types = "image;audio;video;pdf;panorama;record;compound_object;multiple" | split: ";" -%}
 <div class="container py-3">
 
     {% include item/breadcrumbs.html %}
-    <div class="my-0 h5 small">{{ page.display_template | replace: "_", " " | upcase }} {% if page.display_template == "compound_object" or page.display_template == "multiple" %}{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %} ({{ children | size }} Items){% endif %}</div>
+    <div class="my-0 h5 small"><a class="text-dark" href="{{ page.display_template | replace: '_',' '| prepend: '/browse.html#' | relative_url}}">
+        {{ page.display_template | replace: "_", " " | upcase }}</a> {% if page.display_template == "compound_object" or page.display_template == "multiple" %}{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %} ({{ children | size }} Items){% endif %}
+    </div>
     <h2 class="mb-3">{{ page.title }} 
         {% unless page.display_template == 'record' %}<a href="#metadata" class="ms-5 btn btn-sm btn-outline-dark small">Item Info 
             <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
@@ -36,6 +40,11 @@ item-meta: true
         {% if page.rights or page.rightsstatement %}
         <div class="col-md-5 py-4">
             {% include item/rights-box.html %}
+        </div>
+        {% endif %}
+        {% if page.findingaid %}
+        <div class="col-md-5 py-4">
+            {% include item/finding-box.html %}
         </div>
         {% endif %}
     </div>

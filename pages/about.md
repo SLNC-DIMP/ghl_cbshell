@@ -4,32 +4,36 @@ layout: about
 permalink: /about.html
 # include CollectionBuilder info at bottom
 credits: true
+# featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
+about-featured-image: demo_031
+# set background-position for featured image, "center", "top", "bottom"
+position: bottom
+# major heading to display over featured image
+heading: About the Collection
+# paragraph text below heading in featured image
+sub-heading: 
+# additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
+padding: 6em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %} 
+## About CollectionBuilder CSV
 
-{% include feature/nav-menu.html sections="About ____ Collection;Learn More;The North Carolina Digital Collections" %}
+This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
 
-## About the __________ Collection
+CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
 
-This collection features items from the State Library of North Carolina's [Digital Collections](https://digital.ncdcr.gov/) and online resources [NCpedia](https://ncpedia.org/) and [ANCHOR](https://ncpedia.org/anchor/anchor) that ..... These items discuss .... 
+- a CSV of collection metadata
+- a folder of images, PDFs, audio, or video files
 
-{% include feature/image.html header="Juneteenth 2024 Event Calendar" objectid="juneteenth002" caption=false width="25" link="https://aahc.nc.gov/2024-juneteenth-event-calendar"%}
-## Learn More
+Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
+The resulting static site can be hosted on any basic web server.
 
-The history of the Juneteenth holiday began during the Civil War.  On June 19, 1862, President Abraham Lincoln signed “An Act to secure Freedom to all Persons within the Territories of the United States.” The act banned slavery in the Union (except as the punishment for a crime). On June 19, 1865 Union troops arrived in Galveston, Texas to enforce General Order No. 3. The order enforced the Emancipation Proclamation in Texas. It also stated that all 250,000 enslaved people in the state were free. The thirteeenth amendment banning slavery in the United States was eventually passed and ratified by all states in December 1865.  
+[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
+See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
 
-{% include feature/card.html objectid="juneteenth007" width="50" centered=true %}
-
-Beginning in 1866, formerly enslaved people celebrated June 19th annually as their freedom day. In 2007 a law was enacted in North Carolina recognizing Juneteenth National Freedom Day.  In 2021 the Juneteenth National Independence Day Act was signed into law making it a federally recognized holiday.
-
----------------------------------------------------------------------------------------
-## The North Carolina Digital Collections
-The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring togehter content from the State Archives of North Carolina and the State Library of North Carolina.
-
-{% include feature/button.html text="Find Out More About the NC Digital Collections" link="https://digital.ncdcr.gov/about" color="primary" centered="true" %}
+{% include feature/image.html objectid="demo_001" width="75" %} 
 
 <!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
 {% include cb/about_the_about.md %} 

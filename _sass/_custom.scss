@@ -5,3 +5,9 @@
 #footer-logo{
     text-decoration: none;
 }
+thead {
+    border-top: none; /* Example: 2px solid red border */
+}
+.table>:not(:first-child) {
+    border-top:0px;
+}

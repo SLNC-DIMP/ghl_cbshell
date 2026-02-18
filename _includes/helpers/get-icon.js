@@ -18,12 +18,18 @@ function getIcon(objectTemplate,objectFormat,svgType) {
     } else if (iconTemplate.includes("pdf")) {
         iconId = "icon-pdf";
         iconTitle = "pdf file icon";
+    } else if (iconTemplate.includes("book")) {
+        iconId = "icon-book";
+        iconTitle = "book icon";
     } else if (iconTemplate.includes("video")) {
         iconId = "icon-video";
         iconTitle = "video file icon";
     } else if (iconTemplate.includes("audio")) {
         iconId = "icon-audio";
         iconTitle = "audio file icon";
+    } else if (iconTemplate.includes("html")) {
+        iconId = "icon-html";
+        iconTitle = "html file icon";
     } else if (iconTemplate.includes("panorama")) {
         iconId = "icon-panorama";
         iconTitle = "panorama file icon";

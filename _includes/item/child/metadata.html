@@ -9,12 +9,6 @@
 <div id="item-metadata">
     <dl>
         {% for f in fields %}{% if child[f.field] %}
-            {% if f.field == 'title' %}
-                {% if link %}
-                <dt class="field">{{ f.display_name }}:</dt>
-                <dd class="field_value"><a class="me-3" href="{{link}}" target="_blank" rel="noopener">{{ child.title }}</a>
-                {% endif %}
-            {% else %}
             <dt class="field">{{ f.display_name }}:</dt>
             <dd class="field-value">
                 {% if f.browse_link == "true" %}
@@ -27,7 +21,6 @@
                 {% else %}
                 {{ child[f.field] | replace: '""','"' }}{% endif %}
             </dd>
-            {% endif %}
         {% endif %}{% endfor %}
         
     </dl>

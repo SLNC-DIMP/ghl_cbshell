@@ -50,10 +50,10 @@ metadata: demo-metadata
 #   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #   To remove the branding, comment out these values, or delete them. 
 #
-organization-name: "North Carolina Digital Collections"
-organization-link: https://digital.ncdcr.gov/
+organization-name: "Library of North Carolina"
+organization-link: https://library.nc.gov/
 organization-logo-banner: https://static.quartexcollections.com/ncdcr/media-file/89e5af66-ebbd-428d-9dcb-dd8353724866-mastheadsingle.jpg
-organization-logo-nav: /assets/img/logo_ncdc_white.png
+organization-logo-nav: /assets/img/library_logo_sml.png
 
 ##########
 # ROBOTS EXCLUDE

@@ -17,7 +17,7 @@
     }
 }
 </style>
-<div id="home-banner" class="container-fluid mb-0 p-0">
+<div id="home-banner" class="container-fluid mb-0 p-0" role="banner" aria-label="Home Banner">
     <div id="home-title-box" class="position-relative" >
         <div class="p-2 text-center text-white bg-dark bg-opacity-75">
             {% if site.organization-logo-nav %}
@@ -34,7 +34,7 @@
     </div>
 </div>
 {%- else -%}
-<div class="container">
+<div class="container" role="banner">
     <div class="row align-items-center">
         <div id="title" class="{% if site.organization-logo-banner %}col-md-9{% else %}col-12{% endif %}">
             <h1 class="mt-2"><a class="text-dark" href="{{ '/' | relative_url }}" >{{ site.title }}</a></h1>	 

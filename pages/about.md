@@ -18,22 +18,22 @@ padding: 6em
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-## About CollectionBuilder CSV
+## About This Collection
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+This collection features items from the Library of North Carolina's [Digital Collections](https://digital.ncdcr.gov/) and online resources [NCpedia](https://www.ncpedia.org/) and [ANCHOR](https://www.ncanchor.org/) focusing on ...
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+{% include feature/card.html header="_____ Calendar" heading_level="h3" alt="" objectid="/objects/___.jpg" text="View the Calendar" centered="true" caption=false width="50" link="https://events.dncr.nc.gov/A250NC" %}
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+## About _____
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
+{% include feature/card.html text="." objectid="___" width="50" centered=true %}
 
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
+---------------------------------------------------------------------------------------
+## The North Carolina Digital Collections
+The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring together content from the State Archives of North Carolina and the Library of North Carolina.
 
-{% include feature/image.html objectid="demo_001" width="75" %} 
+{% include feature/button.html text="Find Out More About the NC Digital Collections" link="https://digital.ncdcr.gov/about" color="prime" centered="true" %}## About CollectionBuilder CSV
+
 
 <!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
 {% include cb/about_the_about.md %} 
